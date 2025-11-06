@@ -59,7 +59,7 @@ help:
 
 PLATFORM := `uname -o`
 REPO := sparv-sbx-ocr-correction
-PROJECT_SRC := ocr-correction-viklofg-sweocr/src
+PROJECT_SRC := src/sbx_ocr_correction_viklofg_sweocr
 
 ifeq (${VIRTUAL_ENV},)
   VENV_NAME = .venv
@@ -73,8 +73,8 @@ default_cov := "--cov=${PROJECT_SRC}"
 cov_report := "term-missing"
 cov := ${default_cov}
 
-all_tests := ocr-correction-viklofg-sweocr/tests
-tests := ocr-correction-viklofg-sweocr/tests
+all_tests := tests
+tests := tests
 
 info:
 	@echo "Platform: ${PLATFORM}"
@@ -167,19 +167,3 @@ snapshot-update:
 	${INVENV} pytest --snapshot-update
 
 ### === project targets below this line ===
-.PHONY: viklofg-sweocr-prepare-release
-viklofg-sweocr-prepare-release: ocr-correction-viklofg-sweocr/CHANGELOG.md
-	cd ocr-correction-viklofg-sweocr; $(MAKE) tests/requirements-testing.lock
-
-.PHONY: ocr-correction-viklofg-sweocr/CHANGELOG.md
-ocr-correction-viklofg-sweocr/CHANGELOG.md:
-	git cliff --unreleased --include-path "ocr-correction-viklofg-sweocr/**/*" --include-path "examples/ocr-correction-viklofg-sweocr/**/*" --prepend $@
-
-viklofg-sweocr-bumpversion: force_lookup
-	@cd ocr-correction-viklofg-sweocr; $(MAKE) bumpversion $(MFLAGS)
-
-viklofg-sweocr-bumpversion-show: force_lookup
-	@cd ocr-correction-viklofg-sweocr; $(MAKE) bumpversion-show
-
-force_lookup:
-	@true

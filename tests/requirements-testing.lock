@@ -3,21 +3,17 @@
 appdirs==1.4.4
     # via
     #   snakemake
-    #   sparv-pipeline
-argcomplete==3.1.6
-    # via sparv-pipeline
+    #   sparv
+argcomplete==3.6.2
+    # via sparv
 attrs==24.2.0
     # via
     #   jsonschema
     #   referencing
 certifi==2024.8.30
     # via requests
-cffi==1.17.1 ; platform_python_implementation != 'PyPy'
-    # via cryptography
 charset-normalizer==3.4.0
-    # via
-    #   pdfminer-six
-    #   requests
+    # via requests
 click==8.1.7
     # via nltk
 colorama==0.4.6 ; sys_platform == 'win32'
@@ -31,8 +27,6 @@ connection-pool==0.0.3
     # via snakemake
 coverage==7.6.4
     # via pytest-cov
-cryptography==43.0.3
-    # via pdfminer-six
 datrie==0.8.2
     # via snakemake
 diff-match-patch==20241021
@@ -40,13 +34,11 @@ diff-match-patch==20241021
 docutils==0.21.2
     # via snakemake
 docx2python==1.27.1
-    # via sparv-pipeline
+    # via sparv
 dpath==2.2.0
     # via yte
 emoji==2.14.0
     # via stanza
-exceptiongroup==1.2.2 ; python_full_version < '3.11'
-    # via pytest
 fastjsonschema==2.20.0
     # via nbformat
 filelock==3.16.1
@@ -71,8 +63,6 @@ humanfriendly==10.0
     # via snakemake
 idna==3.10
     # via requests
-importlib-metadata==6.8.0
-    # via sparv-pipeline
 iniconfig==2.0.0
     # via pytest
 jinja2==3.1.4
@@ -81,11 +71,11 @@ jinja2==3.1.4
     #   torch
 joblib==1.4.2
     # via nltk
-jsonschema==4.20.0
+jsonschema==4.23.0
     # via
     #   nbformat
     #   snakemake
-    #   sparv-pipeline
+    #   sparv
 jsonschema-specifications==2024.10.1
     # via jsonschema
 jupyter-core==5.7.2
@@ -108,9 +98,11 @@ mypy-extensions==1.0.0
 nbformat==5.10.4
     # via snakemake
 networkx==3.2.1
-    # via torch
-nltk==3.8.1
-    # via sparv-pipeline
+    # via
+    #   stanza
+    #   torch
+nltk==3.9.1
+    # via sparv
 numpy==1.26.4
     # via
     #   stanza
@@ -153,16 +145,10 @@ packaging==24.1
     #   huggingface-hub
     #   pytest
     #   snakemake
-    #   sparv-pipeline
+    #   sparv
     #   transformers
 parallel-corpus==0.2.0
     # via sparv-sbx-ocr-correction-viklofg-sweocr
-pdfminer-six==20221105
-    # via pdfplumber
-pdfplumber==0.10.3
-    # via sparv-pipeline
-pillow==11.0.0
-    # via pdfplumber
 plac==1.4.3
     # via yte
 platformdirs==4.3.6
@@ -173,20 +159,18 @@ prompt-toolkit==3.0.36
     # via questionary
 protobuf==3.20.3
     # via
-    #   sparv-pipeline
+    #   sparv
     #   stanza
 psutil==6.1.0
     # via snakemake
 pulp==2.9.0
     # via snakemake
-pycountry==22.3.5
-    # via sparv-pipeline
-pycparser==2.22 ; platform_python_implementation != 'PyPy'
-    # via cffi
+pycountry==24.6.1
+    # via sparv
 pygments==2.18.0
     # via rich
 pypdfium2==4.30.0
-    # via pdfplumber
+    # via sparv
 pyreadline3==3.5.4 ; sys_platform == 'win32'
     # via humanfriendly
 pytest==8.3.3
@@ -194,21 +178,21 @@ pytest==8.3.3
     #   pytest-cov
     #   syrupy
 pytest-cov==5.0.0
-python-dateutil==2.8.2
-    # via sparv-pipeline
-python-json-logger==2.0.7
-    # via sparv-pipeline
+python-dateutil==2.9.0
+    # via sparv
+python-json-logger==3.3.0
+    # via sparv
 pywin32==308 ; platform_python_implementation != 'PyPy' and sys_platform == 'win32'
     # via jupyter-core
-pyyaml==6.0.1
+pyyaml==6.0.2
     # via
     #   huggingface-hub
     #   snakemake
-    #   sparv-pipeline
+    #   sparv
     #   transformers
     #   yte
 questionary==1.10.0
-    # via sparv-pipeline
+    # via sparv
 referencing==0.35.1
     # via
     #   jsonschema
@@ -221,12 +205,17 @@ requests==2.32.3
     # via
     #   huggingface-hub
     #   snakemake
+    #   sparv
     #   stanza
     #   transformers
 reretry==0.11.8
     # via snakemake
-rich==13.7.0
-    # via sparv-pipeline
+rich==14.0.0
+    # via
+    #   rich-argparse
+    #   sparv
+rich-argparse==1.7.0
+    # via sparv
 rpds-py==0.20.0
     # via
     #   jsonschema
@@ -234,10 +223,8 @@ rpds-py==0.20.0
 ruff==0.7.0
 safetensors==0.4.5
     # via transformers
-setuptools==75.2.0
-    # via
-    #   pycountry
-    #   torch
+setuptools==75.2.0 ; python_full_version >= '3.12'
+    # via torch
 six==1.16.0
     # via python-dateutil
 smart-open==7.0.5
@@ -245,11 +232,14 @@ smart-open==7.0.5
 smmap==5.0.1
     # via gitdb
 snakemake==7.32.3
-    # via sparv-pipeline
-sparv-pipeline==5.2.0
-    # via sparv-sbx-ocr-correction-viklofg-sweocr
-stanza==1.5.1
-    # via sparv-pipeline
+    # via sparv
+sparv==5.3.1
+    # via
+    #   sparv-sbx-ocr-correction-viklofg-sweocr
+    #   sparv-testing
+sparv-testing @ git+https://github.com/spraakbanken/sparv-testing@7cfa166e4699d3f2888f602ab7b4a8927891d5d8
+stanza==1.10.1
+    # via sparv
 stopit==1.1.2
     # via snakemake
 strenum==0.4.15
@@ -264,15 +254,12 @@ throttler==1.2.2
 tokenizers==0.19.1
     # via transformers
 tomli==2.0.2 ; python_full_version <= '3.11'
-    # via
-    #   coverage
-    #   mypy
-    #   pytest
+    # via coverage
 toposort==1.10
     # via snakemake
 torch==2.5.0
     # via
-    #   sparv-pipeline
+    #   sparv
     #   stanza
 tqdm==4.66.5
     # via
@@ -296,7 +283,7 @@ typing-extensions==4.12.2
     #   torch
     #   typing-inspect
 typing-inspect==0.9.0
-    # via sparv-pipeline
+    # via sparv
 urllib3==2.2.3
     # via requests
 wcwidth==0.2.13
@@ -307,5 +294,3 @@ wrapt==1.16.0
     #   snakemake
 yte==1.5.4
     # via snakemake
-zipp==3.20.2
-    # via importlib-metadata

@@ -1,5 +1,6 @@
+from sparv_testing import MemoryOutput, MockAnnotation
+
 from sbx_ocr_correction_viklofg_sweocr.annotations import annotate_ocr_correction
-from sparv_pipeline_testing import MemoryOutput, MockAnnotation
 
 
 def test_annotate_ocr_correction(snapshot) -> None:  # noqa: ANN001

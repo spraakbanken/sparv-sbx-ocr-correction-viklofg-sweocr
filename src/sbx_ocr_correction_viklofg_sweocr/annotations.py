@@ -1,7 +1,5 @@
 """Annotatinos for Sparv."""
 
-from typing import Optional
-
 from sparv import api as sparv_api  # type: ignore [import-untyped]
 from sparv.api import Annotation, Output, annotator  # type: ignore [import-untyped]
 
@@ -42,7 +40,7 @@ def annotate_ocr_correction(
 def parse_ocr_corrections(
     sentences: list,
     token: Annotation,
-    ocr_corrections: list[list[tuple[tuple[int, int], Optional[str]]]],
+    ocr_corrections: list[list[tuple[tuple[int, int], str | None]]],
     out_ocr: Output,
     out_ocr_corr: Output,
 ) -> None:
@@ -51,7 +49,7 @@ def parse_ocr_corrections(
     ocr_corr_ann = []
 
     token_spans = list(token.read_spans())
-    for sent, corr_sent in zip(sentences, ocr_corrections):
+    for sent, corr_sent in zip(sentences, ocr_corrections, strict=True):
         i = 0
         for span, corr_opt in corr_sent:
             start_pos = token_spans[sent[i]][0]

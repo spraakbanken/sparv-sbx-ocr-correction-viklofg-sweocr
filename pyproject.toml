@@ -5,7 +5,6 @@ description = "A sparv plugin for computing suggested OCR improvements."
 readme = "README.md"
 authors = [
     { name = "Språkbanken Text", email = "sb-info@svenska.gu.se" },
-    { name = "Kristoffer Andersson", email = "kristoffer.andersson@gu.se" },
 ]
 license = { text = "MIT" }
 requires-python = ">=3.9"

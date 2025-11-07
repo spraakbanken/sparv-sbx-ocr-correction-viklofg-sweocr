@@ -9,10 +9,10 @@
 
 [![Codecov](https://codecov.io/gh/spraakbanken/sparv-sbx-ocr-correction/coverage.svg)](https://codecov.io/gh/spraakbanken/sparv-sbx-ocr-correction)
 
-[![CI(check)](https://github.com/spraakbanken/sparv-sbx-ocr-correction/actions/workflows/check.yml/badge.svg)](https://github.com/spraakbanken/sparv-sbx-ocr-correction/actions/workflows/check.yml)
-[![CI(release)](https://github.com/spraakbanken/sparv-sbx-ocr-correction/actions/workflows/release-viklofg-sweocr.yml/badge.svg)](https://github.com/spraakbanken/sparv-sbx-ocr-correction/actions/workflows/release-viklofg-sweocr.yml)
-[![CI(scheduled)](https://github.com/spraakbanken/sparv-sbx-ocr-correction/actions/workflows/scheduled.yml/badge.svg)](https://github.com/spraakbanken/sparv-sbx-ocr-correction/actions/workflows/scheduled.yml)
-[![CI(test)](https://github.com/spraakbanken/sparv-sbx-ocr-correction/actions/workflows/test.yml/badge.svg)](https://github.com/spraakbanken/sparv-sbx-ocr-correction/actions/workflows/test.yml)
+[![CI(check)](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/actions/workflows/check.yml/badge.svg)](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/actions/workflows/check.yml)
+[![CI(release)](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/actions/workflows/release-viklofg-sweocr.yml/badge.svg)](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/actions/workflows/release-viklofg-sweocr.yml)
+[![CI(scheduled)](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/actions/workflows/scheduled.yml/badge.svg)](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/actions/workflows/scheduled.yml)
+[![CI(test)](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/actions/workflows/test.yml/badge.svg)](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/actions/workflows/test.yml)
 
 Sparv plugin to annotate corrections to OCR:ed documents.
 

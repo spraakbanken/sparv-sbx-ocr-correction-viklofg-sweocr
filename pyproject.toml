@@ -11,7 +11,7 @@ requires-python = ">=3.11"
 dependencies = [
     "parallel-corpus>=0.2.0",
     "sparv>=5.3.1",
-    "transformers>=4.40.0,<4.45.0", # Code behave strange with transformers==4.45, see https://github.com/spraakbanken/sparv-sbx-ocr-correction/issues/52
+    "transformers>=4.40.0,<4.45.0", # Code behave strange with transformers==4.45, see https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/issues/52
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -40,9 +40,9 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://spraakbanken.gu.se"
-Repository = "https://github.com/spraakbanken/sparv-sbx-ocr-correction"
-Issues = "https://github.com/spraakbanken/sparv-sbx-ocr-correction/issues"
-Changelog = "https://github.com/spraakbanken/sparv-sbx-ocr-correction/blob/main/CHANGELOG.md"
+Repository = "https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr"
+Issues = "https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/issues"
+Changelog = "https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/blob/main/CHANGELOG.md"
 
 [project.entry-points."sparv.plugin"]
 sbx_ocr_correction_viklofg_sweocr = "sbx_ocr_correction_viklofg_sweocr"

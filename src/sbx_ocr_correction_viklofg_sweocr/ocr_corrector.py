@@ -161,7 +161,7 @@ def _align_and_diff(g: graph.Graph, *, curr_start: int) -> tuple[list[tuple[tupl
             curr_start += len(source_ids)
             corrections.append(((start, curr_start), target_text))
         else:
-            # TODO Handle this correct (https://github.com/spraakbanken/sparv-sbx-ocr-correction/issues/50)
+            # TODO Handle this correct (https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/issues/50)
             raise NotImplementedError(f"Handle several sources, {source_ids=} {target_ids=} {g.source=} {g.target=}")
 
     return corrections, curr_start

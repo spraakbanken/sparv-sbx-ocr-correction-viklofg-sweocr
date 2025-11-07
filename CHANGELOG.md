@@ -67,7 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Documentation
 
-- Fix description by [@kod-kristoff](https://github.com/kod-kristoff) in [#37](https://github.com/spraakbanken/sparv-sbx-ocr-correction/pull/37)
+- Fix description by [@kod-kristoff](https://github.com/kod-kristoff) in [#37](https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/pull/37)
 
 ### Fixed
 

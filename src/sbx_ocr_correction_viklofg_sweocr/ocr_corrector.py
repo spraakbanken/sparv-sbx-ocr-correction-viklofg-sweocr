@@ -1,7 +1,7 @@
 """OCR corrector."""
 
 import re
-from typing import Any, Optional
+from typing import Any
 
 import torch
 from parallel_corpus import graph
@@ -39,7 +39,7 @@ def _get_dtype() -> torch.dtype:
     return dtype
 
 
-def _get_device_map() -> Optional[str]:
+def _get_device_map() -> str | None:
     return "auto" if torch.cuda.is_available() and torch.cuda.device_count() > 1 else None
 
 
@@ -79,14 +79,14 @@ class OcrCorrector:
         )
         return cls(model=model, tokenizer=tokenizer)
 
-    def calculate_corrections(self, text: list[str]) -> list[tuple[tuple[int, int], Optional[str]]]:
+    def calculate_corrections(self, text: list[str]) -> list[tuple[tuple[int, int], str | None]]:
         """Calculate OCR corrections for a given text."""
         logger.debug("Analyzing '%s'", text)
 
         parts: list[str] = []
         curr_part: list[str] = []
         curr_len = 0
-        ocr_corrections: list[tuple[tuple[int, int], Optional[str]]] = []
+        ocr_corrections: list[tuple[tuple[int, int], str | None]] = []
         for word in text:
             len_word = bytes_length(word)
             if (curr_len + len_word + 1) > self.TEXT_LIMIT:
@@ -114,7 +114,7 @@ class OcrCorrector:
         return ocr_corrections
 
 
-def _align_and_diff(g: graph.Graph, *, curr_start: int) -> tuple[list[tuple[tuple[int, int], Optional[str]]], int]:
+def _align_and_diff(g: graph.Graph, *, curr_start: int) -> tuple[list[tuple[tuple[int, int], str | None]], int]:
     corrections = []
 
     edge_map = graph.edge_map(g)
@@ -161,7 +161,7 @@ def _align_and_diff(g: graph.Graph, *, curr_start: int) -> tuple[list[tuple[tupl
             curr_start += len(source_ids)
             corrections.append(((start, curr_start), target_text))
         else:
-            # TODO Handle this correct (https://github.com/spraakbanken/sparv-sbx-ocr-correction/issues/50)
+            # TODO Handle this correct (https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/issues/50)
             raise NotImplementedError(f"Handle several sources, {source_ids=} {target_ids=} {g.source=} {g.target=}")
 
     return corrections, curr_start

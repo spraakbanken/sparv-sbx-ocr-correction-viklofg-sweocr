@@ -1,4 +1,5 @@
 import pytest
+
 from sbx_ocr_correction_viklofg_sweocr.ocr_corrector import (
     OcrCorrector,
 )

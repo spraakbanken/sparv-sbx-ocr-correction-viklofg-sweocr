@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 env:
-  MINIMUM_PYTHON_VERSION: "3.10"
+  MINIMUM_PYTHON_VERSION: "3.11"
   UV_VERSION: "0.9.1"
 
 jobs:
@@ -32,7 +32,6 @@ jobs:
         os: [ubuntu]
         python-version:
           # remove the unused versions
-          - "3.10"
           - "3.11"
           - "3.12"
           # - "3.13"  TODO tokenizers need to be at version >=0.20.2 to support python 3.13
@@ -99,7 +98,7 @@ jobs:
     #
 
     runs-on: ubuntu-latest
-    name: ubuntu / 3.10 / minimal-versions
+    name: ubuntu / 3.11 / minimal-versions
     steps:
       - uses: actions/checkout@71cf2267d89c5cb81562390fa70a37fa40b1305e # v5.0.0
         with:

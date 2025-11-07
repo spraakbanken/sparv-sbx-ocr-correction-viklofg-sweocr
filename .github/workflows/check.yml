@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 env:
-  MINIMUM_PYTHON_VERSION: "3.10"
+  MINIMUM_PYTHON_VERSION: "3.11"
   UV_VERSION: "0.9.1"
 
 # If new code is pushed to a PR branch, then cancel in progress workflows for that PR. Ensures that
@@ -23,7 +23,7 @@ concurrency:
 jobs:
   fmt:
     runs-on: ubuntu-latest
-    name: ubuntu / 3.10 / fmt
+    name: ubuntu / 3.11 / fmt
     steps:
       - uses: actions/checkout@71cf2267d89c5cb81562390fa70a37fa40b1305e # v5.0.0
         with:
@@ -53,7 +53,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
-    name: ubuntu / 3.10 / lint
+    name: ubuntu / 3.11 / lint
     steps:
       - uses: actions/checkout@71cf2267d89c5cb81562390fa70a37fa40b1305e # v5.0.0
         with:
@@ -82,7 +82,7 @@ jobs:
 
   type-check:
     runs-on: ubuntu-latest
-    name: ubuntu / 3.10 / type-check
+    name: ubuntu / 3.11 / type-check
     steps:
       - uses: actions/checkout@71cf2267d89c5cb81562390fa70a37fa40b1305e # v5.0.0
         with:

@@ -1,11 +1,11 @@
 # sparv-sbx-ocr-correction-viklofg-sweocr
 
-[![PyPI version](https://badge.fury.io/py/sparv-sbx-ocr-correction-viklofg-sweocr.svg)](https://pypi.org/project/sparv-sbx-ocr-correction-viklofg-sweocr)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sparv-sbx-ocr-correction-viklofg-sweocr)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/sparv-sbx-ocr-correction-viklofg-sweocr)](https://pypi.org/project/sparv-sbx-ocr-correction-viklofg-sweocr/)
+[![PyPI version](https://img.shields.io/pypi/v/sparv-sbx-ocr-correction-viklofg-sweocr.svg)](https://pypi.org/project/sparv-sbx-ocr-correction-viklofg-sweocr/)
+[![PyPI license](https://img.shields.io/pypi/l/sparv-sbx-ocr-correction-viklofg-sweocr.svg)](https://pypi.org/project/sparv-sbx-ocr-correction-viklofg-sweocr/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sparv-sbx-ocr-correction-viklofg-sweocr.svg)](https://pypi.org/project/sparv-sbx-ocr-correction-viklofg-sweocr)
 
 [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/spraakbanken/getting-started/blob/main/scorecard.md)
-[![Stage](https://img.shields.io/pypi/status/sparv-sbx-ocr-correction-viklofg-sweocr)](https://pypi.org/project/sparv-sbx-ocr-correction-viklofg-sweocr)
+[![Stage](https://img.shields.io/pypi/status/sparv-sbx-ocr-correction-viklofg-sweocr.svg)](https://pypi.org/project/sparv-sbx-ocr-correction-viklofg-sweocr)
 
 [![Codecov](https://codecov.io/gh/spraakbanken/sparv-sbx-ocr-correction/coverage.svg)](https://codecov.io/gh/spraakbanken/sparv-sbx-ocr-correction)
 

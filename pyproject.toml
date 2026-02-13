@@ -11,7 +11,7 @@ requires-python = ">=3.11"
 dependencies = [
     "parallel-corpus>=0.2.0",
     "sparv>=5.3.1",
-    "transformers>=4.40.0,<4.45.0", # Code behave strange with transformers==4.45, see https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/issues/52
+    "transformers>=4.40.0,<5.2.0", # Code behave strange with transformers==4.45, see https://github.com/spraakbanken/sparv-sbx-ocr-correction-viklofg-sweocr/issues/52
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
